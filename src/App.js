@@ -5,6 +5,12 @@ import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar.js';
 
 
+// Ustra for handling App.state
+import Ustra from './Ustra.js';
+
+
+// Other constants -------------------------------------------------------------
+
 const pageOptions = {
   "About": ["About Me"],
   "Projects": ["IndieOutreach", "Conjure", "Data Free", "FlowGrid"],
@@ -12,17 +18,66 @@ const pageOptions = {
   "Art": ["Redbubble"]
 }
 
+
+// =============================================================================
+// USTRA
+// =============================================================================
+/*
+    Ustra is a class used to uniformly manage App.state
+*/
+
+const PT_selectedSection = "selectedSection";
+
+const dataSkeleton = {
+  [PT_selectedSection]: "About Me"
+};
+
+var ustra = new Ustra(dataSkeleton);
+
+// =============================================================================
 // <App/>
+// =============================================================================
+
 class App extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      truth: ustra.getTruth()
+    }
+  }
+
+
+  // Update Ustra --------------------------------------------------------------
+  /*
+    Functions for updating information
+      -> pass updates to ustra, use results to update app.state
+  */
+
+  update = (value, pathTag) => {
+    let newState = ustra.update(value, pathTag);
+    this.setState({ truth: newState });
+  }
+
+
+  // onClick -------------------------------------------------------------------
+
+
+  // render --------------------------------------------------------------------
+
   render() {
+
+    let truth = this.state.truth;
+
     return (
       <div id="App">
 
         <div id="left_container">
           <Sidebar
             options={pageOptions}
-            selectedOption="About Me"
+            selectedOption={truth[PT_selectedSection]}
+            update={this.update}
+            selectedOptionTag={PT_selectedSection}
           />
         </div>
 

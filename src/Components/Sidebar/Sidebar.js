@@ -7,6 +7,14 @@ class Sidebar extends Component {
     super();
   }
 
+  // onClick -------------------------------------------------------------------
+
+  onClick_selectSection = (section) => {
+    if (this.props.selectedOption !== section) {
+      this.props.update(section, this.props.selectedOptionTag);
+    }
+  }
+
   // render --------------------------------------------------------------------
 
 
@@ -34,7 +42,7 @@ class Sidebar extends Component {
           );
         } else {
           optionsToRender.push(
-            <div className="unselected_option_container">
+            <div className="unselected_option_container" onClick={() => this.onClick_selectSection(listOfOptions[i])}>
               <h2 className="option_title_grey">{listOfOptions[i]}</h2>
             </div>
           );
