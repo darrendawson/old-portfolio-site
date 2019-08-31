@@ -13,4 +13,7 @@
 #App #right_container {
   height: 100%;
   width: calc(100% - 375px);
+  background-color: #eaeaea;
+  overflow: auto;
+  scrollbar-width: none;
 }

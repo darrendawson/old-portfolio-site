@@ -1,0 +1,87 @@
+#AboutCard {
+  display: flex;
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 5px;
+  border-right: 10px solid #19b1ea;
+  width: 90%;
+  box-shadow: 5px 10px 15px grey;
+}
+
+#AboutCard #profile_img_column {
+  height: 100%;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#AboutCard #profile_img_rounded {
+  width: 300px;
+  border-radius: 150px;
+  border: 1px solid black;
+}
+
+#AboutCard #title {
+  font-size: 4em;
+  margin: 0px;
+  margin-right: 40px;
+  color: white;
+}
+
+#AboutCard .column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#AboutCard .row_space_between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#AboutCard .row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#AboutCard .social_media_img {
+  height: 35px;
+  cursor: pointer;
+  margin: 20px 10px;
+}
+
+#AboutCard .divider {
+  height: 3px;
+  width: 100%;
+  margin-bottom: 15px;
+  background-image: linear-gradient(to right, #19b1ea, #282828);
+}
+
+#AboutCard .description_text {
+  font-size: 1.3em;
+  font-style: italic;
+  text-align: left;
+  color: #eaeaea;
+  margin: 3px;
+}
+
+#AboutCard #view_button {
+  border: 1px solid #19b1ea;
+  color: #19b1ea;
+  background-color: #282828;
+  padding: 5px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+#AboutCard #view_button:hover {
+  color: white;
+  border-color: white;
+}

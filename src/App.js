@@ -3,7 +3,7 @@ import './App.css';
 
 // components
 import Sidebar from './Components/Sidebar/Sidebar.js';
-
+import AboutMePage from './Components/Pages/AboutMePage.js';
 
 // Ustra for handling App.state
 import Ustra from './Ustra.js';
@@ -65,6 +65,15 @@ class App extends Component {
 
   // render --------------------------------------------------------------------
 
+
+  //
+  renderPages = () => {
+    return (
+      <AboutMePage/>
+    );
+  }
+
+  // renders <App/>
   render() {
 
     let truth = this.state.truth;
@@ -82,7 +91,7 @@ class App extends Component {
         </div>
 
         <div id="right_container">
-
+          {this.renderPages()}
         </div>
 
       </div>
