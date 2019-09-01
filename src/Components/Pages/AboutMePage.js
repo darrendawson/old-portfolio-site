@@ -233,6 +233,7 @@ class AboutMePage extends Component {
         <ProfileCard
           title="Darren Dawson"
           profileImages={[img_headshot1]}
+          profileImageRoundedCorners={true}
           socialMediaLinks={socialMediaLinks}
           description={aboutMeDescription}
           viewButtonLink=""

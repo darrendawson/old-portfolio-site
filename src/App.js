@@ -4,6 +4,7 @@ import './App.css';
 // components
 import Sidebar from './Components/Sidebar/Sidebar.js';
 import AboutMePage from './Components/Pages/AboutMePage.js';
+import IndieOutreachPage from './Components/Pages/IndieOutreachPage.js';
 
 // Ustra for handling App.state
 import Ustra from './Ustra.js';
@@ -29,7 +30,7 @@ const pageOptions = {
 const PT_selectedSection = "selectedSection";
 
 const dataSkeleton = {
-  [PT_selectedSection]: "About Me"
+  [PT_selectedSection]: "IndieOutreach"
 };
 
 var ustra = new Ustra(dataSkeleton);
@@ -68,9 +69,15 @@ class App extends Component {
 
   //
   renderPages = () => {
-    return (
-      <AboutMePage/>
-    );
+
+    let currentPage = this.state.truth[PT_selectedSection];
+
+    if (currentPage === "About Me") {
+      return (<AboutMePage/>);
+    } else if (currentPage === "IndieOutreach") {
+      return (<IndieOutreachPage/>);
+    }
+
   }
 
   // renders <App/>

@@ -20,6 +20,10 @@
   border: 1px solid black;
 }
 
+#ProfileCard #profile_img_no_border {
+  width: 150px;
+}
+
 #ProfileCard #title {
   font-size: 4em;
   margin: 0px;

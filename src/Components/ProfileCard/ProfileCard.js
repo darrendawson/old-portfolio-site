@@ -10,9 +10,11 @@ class ProfileCard extends Component {
   // render --------------------------------------------------------------------
 
   renderProfileImage = () => {
+
+    let borderCSS = (this.props.profileImageRoundedCorners) ? "profile_img_rounded" : "profile_img_no_border";
     return (
       <div id="profile_img_column">
-        <img id="profile_img_rounded" src={this.props.profileImages[0]}/>
+        <img id={borderCSS} src={this.props.profileImages[0]}/>
       </div>
     );
   }
@@ -50,7 +52,7 @@ class ProfileCard extends Component {
 
     return (
       <a href={this.props.viewButtonLink} target="_blank">
-        <button id="view_button">View</button>
+        <button id="view_button" style={{'color': this.props.highlightColor, 'border-color': this.props.highlightColor}}>View</button>
       </a>
     );
   }
@@ -58,7 +60,7 @@ class ProfileCard extends Component {
   // Renders <ProfileCard/>
   render() {
     return (
-      <div id="ProfileCard">
+      <div id="ProfileCard" style={{'border-color': this.props.highlightColor}}>
         {this.renderProfileImage()}
 
         <div className="column">
@@ -69,7 +71,7 @@ class ProfileCard extends Component {
             </div>
             {this.renderViewButton()}
           </div>
-          <div className="divider"></div>
+          <div className="divider" style={{'background-image': 'linear-gradient(to right, ' + this.props.highlightColor + ', #282828)'}}></div>
           <div className="column">
             {this.renderDescriptionText()}
           </div>
