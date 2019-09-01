@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './AboutCard.css';
+import './ProfileCard.css';
 
-class AboutCard extends Component {
+class ProfileCard extends Component {
 
   constructor() {
     super();
@@ -55,10 +55,10 @@ class AboutCard extends Component {
     );
   }
 
-  // Renders <AboutCard/>
+  // Renders <ProfileCard/>
   render() {
     return (
-      <div id="AboutCard">
+      <div id="ProfileCard">
         {this.renderProfileImage()}
 
         <div className="column">
@@ -79,4 +79,4 @@ class AboutCard extends Component {
   }
 }
 
-export default AboutCard;
+export default ProfileCard;

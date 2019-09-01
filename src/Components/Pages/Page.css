@@ -1,9 +1,39 @@
 #Page {
-  width: calc(100% - 200px);
-  margin-left: 200px;
-  padding-top: 50px;
+  width: 100%;
+  width: calc(100% - 400px);
+  margin: 100px 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+#Page .category_title_row {
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Page .category_title {
+  font-size: 3.5em;
+  margin-top: 30px;
+  margin: 30px;
+}
+
+#Page .item_cards_row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+#Page .item_card_container {
+  width: 30%;
+  min-width: 400px;
+  margin: 15px;
+  height: 500px;
 }

@@ -1,34 +1,33 @@
-#AboutCard {
+#ProfileCard {
+  width: calc(100% - 40px - 10px);
   display: flex;
   background-color: #282828;
   padding: 20px;
   border-radius: 5px;
   border-right: 10px solid #19b1ea;
-  width: 90%;
   box-shadow: 5px 10px 15px grey;
 }
 
-#AboutCard #profile_img_column {
+#ProfileCard #profile_img_column {
   height: 100%;
   margin-right: 20px;
   border-radius: 5px;
-  border: 1px solid black;
 }
 
-#AboutCard #profile_img_rounded {
+#ProfileCard #profile_img_rounded {
   width: 300px;
   border-radius: 150px;
   border: 1px solid black;
 }
 
-#AboutCard #title {
+#ProfileCard #title {
   font-size: 4em;
   margin: 0px;
   margin-right: 40px;
   color: white;
 }
 
-#AboutCard .column {
+#ProfileCard .column {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,7 +35,7 @@
   align-items: flex-start;
 }
 
-#AboutCard .row_space_between {
+#ProfileCard .row_space_between {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -44,26 +43,26 @@
   width: 100%;
 }
 
-#AboutCard .row {
+#ProfileCard .row {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-#AboutCard .social_media_img {
+#ProfileCard .social_media_img {
   height: 35px;
   cursor: pointer;
   margin: 20px 10px;
 }
 
-#AboutCard .divider {
+#ProfileCard .divider {
   height: 3px;
   width: 100%;
   margin-bottom: 15px;
   background-image: linear-gradient(to right, #19b1ea, #282828);
 }
 
-#AboutCard .description_text {
+#ProfileCard .description_text {
   font-size: 1.3em;
   font-style: italic;
   text-align: left;
@@ -71,7 +70,7 @@
   margin: 3px;
 }
 
-#AboutCard #view_button {
+#ProfileCard #view_button {
   border: 1px solid #19b1ea;
   color: #19b1ea;
   background-color: #282828;
@@ -81,7 +80,7 @@
   font-size: 1.3em;
 }
 
-#AboutCard #view_button:hover {
+#ProfileCard #view_button:hover {
   color: white;
   border-color: white;
 }
