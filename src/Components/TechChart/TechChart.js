@@ -242,9 +242,9 @@ class TechChart extends Component {
   render() {
     return (
       <div id="TechChart">
-        <div style={{}}>
+        <div id="card_container">
           <div id="chart_title_row">
-            <h1 style={{'color': this.props.highlightColor, 'text-align': 'left', 'margin': '0px 40px 0px 0px', 'font-size': '3.5em'}}>Tech Used</h1>
+            <h1 style={{'color': this.props.highlightColor, 'text-align': 'left', 'margin': '0px 40px 0px 0px', 'font-size': '3.5em'}}>Tech Stack</h1>
           </div>
 
           <div id="chart_title_row" style={{'padding-left': '55px', 'margin-top': '10px'}}>

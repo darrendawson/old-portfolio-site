@@ -27,6 +27,8 @@ class Sidebar extends Component {
       return '#6f3ce8';
     } else if (option === "Conjure") {
       return '#eaac27';
+    } else if (option === "Data Free") {
+      return '#ea2727';
     }
   }
 

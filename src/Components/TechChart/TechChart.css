@@ -6,6 +6,17 @@
   align-items: flex-start;
 }
 
+#TechChart #card_container {
+  background-color: #f4f4f4;
+  height: 100%;
+  flex-grow: 1;
+  height: 100%;
+  margin-right: 40px;
+  padding: 20px;
+  box-shadow: 5px 10px 15px grey;
+  border-radius: 5px;
+}
+
 #TechChart #chart_title_row {
   display: flex;
   align-items: center;
