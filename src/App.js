@@ -5,6 +5,7 @@ import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar.js';
 import AboutMePage from './Components/Pages/AboutMePage.js';
 import IndieOutreachPage from './Components/Pages/IndieOutreachPage.js';
+import ConjurePage from './Components/Pages/ConjurePage.js';
 
 // Ustra for handling App.state
 import Ustra from './Ustra.js';
@@ -76,6 +77,8 @@ class App extends Component {
       return (<AboutMePage/>);
     } else if (currentPage === "IndieOutreach") {
       return (<IndieOutreachPage/>);
+    } else if (currentPage === "Conjure") {
+      return (<ConjurePage/>);
     }
 
   }

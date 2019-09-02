@@ -25,6 +25,8 @@ class Sidebar extends Component {
       return '#19b1ea';
     } else if (option === "IndieOutreach") {
       return '#6f3ce8';
+    } else if (option === "Conjure") {
+      return '#eaac27';
     }
   }
 
