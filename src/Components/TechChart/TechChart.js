@@ -254,7 +254,7 @@ class TechChart extends Component {
           {this.renderMath()}
         </div>
 
-        <div style={{'height': '400px', 'width': '500px'}}>
+        <div id="item_card_container">
           {this.renderSelectedCard()}
         </div>
 

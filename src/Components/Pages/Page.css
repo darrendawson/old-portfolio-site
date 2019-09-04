@@ -1,7 +1,6 @@
 #Page {
-  width: 100%;
-  width: calc(100% - 400px);
-  margin: 100px 200px;
+  width: calc(90%);
+  margin: 100px 5%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

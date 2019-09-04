@@ -14,7 +14,7 @@ import img_github from '../../Images/SocialMedia/github.png';
 // constants -------------------------------------------------------------------
 
 const conjureDescription = [
-  "Conjure is a Google Forms style survey generator. ",
+  "Conjure is a highly flexible Google Forms style survey generator. ",
   "Conjure lets you define what the output JSON will look like when a user fills out the form. ",
   "In the future, users will be able to fill out these forms to generate working code. ",
   "Conjure is currently under development! "

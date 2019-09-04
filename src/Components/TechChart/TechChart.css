@@ -2,19 +2,28 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0px;
 }
 
 #TechChart #card_container {
   background-color: #f4f4f4;
   height: 100%;
-  flex-grow: 1;
+  flex-grow: 2;
   height: 100%;
-  margin-right: 40px;
   padding: 20px;
   box-shadow: 5px 10px 15px grey;
   border-radius: 5px;
+  margin: 10px;
+}
+
+#TechChart #item_card_container {
+  height: 400px;
+  width: 500px;
+  flex-grow: 1;
+  margin: 10px;
 }
 
 #TechChart #chart_title_row {
@@ -70,6 +79,7 @@
   justify-content: flex-start;
   align-items: center;
   margin: 20px 70px;
+  flex-wrap: wrap;
 }
 
 #TechChart .math_node_contanier {
