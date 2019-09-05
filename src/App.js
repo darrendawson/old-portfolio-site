@@ -18,7 +18,8 @@ import Ustra from './Ustra.js';
 
 const pageOptions = {
   "About": ["About Me"],
-  "Projects": ["IndieOutreach", "Conjure", "Data Free", "FlowGrid", "Portfolio"],
+  "Products": ["IndieOutreach", "Data Free"],
+  "Projects": ["Conjure", "FlowGrid", "Portfolio"],
   "Hackathons": ["Intuit 2018", "Y Combinator (s2019)"],
   "Art": ["Redbubble"]
 }
