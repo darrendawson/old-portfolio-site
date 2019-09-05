@@ -59,7 +59,7 @@ const sinatraObject = {
     {"type": "text", "text": "Use Case"},
     {"type": "list", "text": "After Twilio gets a text from a user, it forwards it to an endpoint on this RESTful Sinatra server. "},
     {"type": "list", "text": "The server unpackages the header info, finds the result of the query, compresses it using modified Huffman Encoding, and sends the result back to the user via Twilio."},
-    {"type": "list", "text": "Was hosted on AWS EC2"},
+    {"type": "list", "text": "Used to be hosted on AWS EC2"},
   ]
 }
 

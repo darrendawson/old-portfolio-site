@@ -29,6 +29,8 @@ class Sidebar extends Component {
       return '#eaac27';
     } else if (option === "Data Free") {
       return '#ea2727';
+    } else if (option === "FlowGrid") {
+      return '#17e573';
     }
   }
 
