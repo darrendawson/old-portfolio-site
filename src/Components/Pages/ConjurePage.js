@@ -5,11 +5,19 @@ import './Page.css';
 import ProfileCard from '../ProfileCard/ProfileCard.js';
 import TechChart from '../TechChart/TechChart.js';
 import ItemCard from '../ItemCard/ItemCard.js';
+import ImageSlideshow from '../ImageSlideshow/ImageSlideshow.js';
 
 // images
 import img_conjureIcon from '../../Images/Conjure/conjure_icon.png';
 import img_reactIcon from '../../Images/Logos/react.png';
 import img_github from '../../Images/SocialMedia/github.png';
+
+
+import screenshot_questionArray from '../../Images/Conjure/screenshots/array.png';
+import screenshot_conditionalRender from '../../Images/Conjure/screenshots/conditional_render_2.png';
+import screenshot_outputObject from '../../Images/Conjure/screenshots/output_object.png';
+import screenshot_sampleForm from '../../Images/Conjure/screenshots/sample_form.png';
+
 
 // constants -------------------------------------------------------------------
 
@@ -39,6 +47,14 @@ const languagesUsed = ["JavaScript", "HTML", "CSS"];
 const techUsed = {
   "React.js": reactObject
 };
+
+
+const slideshowImages = [
+  {'img': screenshot_sampleForm, 'title': 'A Flexible Form Generator', 'description': 'Conjure forms are highly customizable.'},
+  {'img': screenshot_questionArray, 'title': 'Arbitrary Arrays', 'description': 'Conjure lets you create arrays for sets of questions you want to ask multiple times.'},
+  {'img': screenshot_outputObject, 'title': 'A Well-Defined Output Object', 'description': 'While building a Conjure Form, you get to control what the JSON output of the form will look like. '},
+  {'img': screenshot_conditionalRender, 'title': 'Conditional Rendering', 'description': 'Conjure\'s conditional rendering lets you ask certain questions based off of context.'}
+];
 
 // <ConjurePage/> --------------------------------------------------------------
 
@@ -71,6 +87,11 @@ class ConjurePage extends Component {
             highlightColor="#eaac27"
           />
         </div>
+
+        <ImageSlideshow
+          images={slideshowImages}
+          highlightColor="#eaac27"
+        />
       </div>
     );
   }
