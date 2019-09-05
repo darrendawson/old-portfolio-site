@@ -8,6 +8,7 @@ import IndieOutreachPage from './Components/Pages/IndieOutreachPage.js';
 import ConjurePage from './Components/Pages/ConjurePage.js';
 import DataFreePage from './Components/Pages/DataFreePage.js';
 import FlowGridPage from './Components/Pages/FlowGridPage.js';
+import PortfolioPage from './Components/Pages/PortfolioPage.js';
 
 // Ustra for handling App.state
 import Ustra from './Ustra.js';
@@ -85,6 +86,8 @@ class App extends Component {
       return (<DataFreePage/>);
     } else if (currentPage === "FlowGrid") {
       return (<FlowGridPage/>);
+    } else if (currentPage === "Portfolio") {
+      return (<PortfolioPage/>);
     }
 
   }
