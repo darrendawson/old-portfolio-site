@@ -5,6 +5,7 @@ import './Page.css';
 import ProfileCard from '../ProfileCard/ProfileCard.js';
 import TechChart from '../TechChart/TechChart.js';
 import ItemCard from '../ItemCard/ItemCard.js';
+import ImageSlideshow from '../ImageSlideshow/ImageSlideshow.js';
 
 // images
 import img_indieOutreachIcon from '../../Images/IndieOutreach/io_icon.png';
@@ -13,6 +14,13 @@ import img_igdbIcon from '../../Images/Logos/igdb.png';
 import img_reactIcon from '../../Images/Logos/react.png';
 import img_nodeIcon from '../../Images/Logos/node.png';
 import img_mySQL from '../../Images/Logos/mysql.png';
+
+import screenshot_searchParameters from '../../Images/IndieOutreach/screenshots/search_parameters.png';
+import screenshot_searchFilters from '../../Images/IndieOutreach/screenshots/search_filters.png';
+import screenshot_resultCards from '../../Images/IndieOutreach/screenshots/result_cards.png';
+import screenshot_streamerOverview from '../../Images/IndieOutreach/screenshots/streamer_overview.png';
+import screenshot_relatedToSearch from '../../Images/IndieOutreach/screenshots/related_to_search.png';
+
 
 // constants -------------------------------------------------------------------
 
@@ -82,6 +90,15 @@ const techUsed = {
   "React.js": reactObject
 };
 
+
+const slideshowImages = [
+  {'img': screenshot_searchParameters, 'title': 'Search Parameters', 'description': 'Searching on IndieOutreach is as simple as describing details about your game.'},
+  {'img': screenshot_searchFilters, 'title': 'Filter Streamers', 'description': 'There a *lot* of streamers on Twitch. Set hard filters to focus your efforts. '},
+  {'img': screenshot_resultCards, 'title': 'Browse Results', 'description': 'Quickly browse through all streamers that match your search. '},
+  {'img': screenshot_streamerOverview, 'title': 'Streamer Overview', 'description': 'View at a glance data about a streamer\'s gameplay habits to see if they\'d be a good fit.'},
+  {'img': screenshot_relatedToSearch, 'title': 'Related to Search', 'description': 'IndieOutreach highlights any games a streamer played that might be relevant to your search. '}
+];
+
 // <IndieOutreachPage/> --------------------------------------------------------
 
 class IndieOutreachPage extends Component {
@@ -105,7 +122,7 @@ class IndieOutreachPage extends Component {
           highlightColor="#6f3ce8"
         />
 
-        <div style={{'margin-top': '40px', 'width': '100%'}}>
+        <div style={{'width': '100%'}}>
           <TechChart
             tech={techUsed}
             order={techUsedOrder}
@@ -114,10 +131,10 @@ class IndieOutreachPage extends Component {
           />
         </div>
 
-        {/*
-          <div style={{'height': '2px', 'width': '96%', 'margin-left': '2%', 'background-color': '#cecece'}}></div>
-        */}
-
+        <ImageSlideshow
+          images={slideshowImages}
+          highlightColor="#8654f9"
+        />
       </div>
     );
   }

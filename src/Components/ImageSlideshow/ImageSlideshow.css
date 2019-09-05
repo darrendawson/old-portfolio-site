@@ -1,0 +1,64 @@
+#ImageSlideshow {
+  width: 100%;
+}
+
+#ImageSlideshow #image_container {
+  width: 100%;
+  height: 1080px;
+  display: flex;
+  border-radius: 5px;
+  background-color: #282828;
+  background-position: center center;
+  margin-bottom: 5px;
+}
+
+#ImageSlideshow #title_container {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0, .85);
+  height: 70px;
+  flex-grow: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#ImageSlideshow #img_title {
+  color: white;
+  margin: 0px;
+}
+
+#ImageSlideshow #img_description {
+  color: white;
+  margin: 0px;
+}
+
+#ImageSlideshow #buttons_container {
+  display: flex;
+  justify-content: center;
+}
+
+#ImageSlideshow .img_select_button_selected {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  border: none;
+  margin: 7px;
+}
+
+#ImageSlideshow .img_select_button_unselected {
+  height: 16px;
+  width: 16px;
+  background-color: #cecece;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 7px;
+}
+
+#ImageSlideshow .img_select_button_unselected:hover {
+  background-color: #bcbcbc;
+}

@@ -63,7 +63,7 @@ class FlowGridPage extends Component {
           highlightColor="#17e573"
         />
 
-        <div style={{'margin-top': '40px', 'width': '100%'}}>
+        <div style={{'width': '100%'}}>
           <TechChart
             tech={techUsed}
             order={techUsedOrder}

@@ -95,7 +95,7 @@ class DataFreePage extends Component {
           highlightColor="#ea2727"
         />
 
-        <div style={{'margin-top': '40px', 'width': '100%'}}>
+        <div style={{'width': '100%'}}>
           <TechChart
             tech={techUsed}
             order={techUsedOrder}
