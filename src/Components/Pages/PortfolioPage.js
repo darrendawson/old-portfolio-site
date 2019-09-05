@@ -15,7 +15,7 @@ import img_reactIcon from '../../Images/Logos/react.png';
 // constants -------------------------------------------------------------------
 
 const socialMediaLinks = [
-  {"img": img_github, "link": "https://github.com/darrendawson/Portfolio"}
+  {"img": img_github, "link": "https://github.com/darrendawson/PortfolioSite"}
 ];
 
 const portfolioDescription = [
