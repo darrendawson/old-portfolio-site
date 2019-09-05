@@ -5,12 +5,17 @@ import './Page.css';
 import ProfileCard from '../ProfileCard/ProfileCard.js';
 import TechChart from '../TechChart/TechChart.js';
 import ItemCard from '../ItemCard/ItemCard.js';
+import ImageSlideshow from '../ImageSlideshow/ImageSlideshow.js';
 
 
 // images
 import img_flowGridIcon from '../../Images/FlowGrid/flowgrid_logo.png';
 import img_github from '../../Images/SocialMedia/github.png';
 import img_reactIcon from '../../Images/Logos/react.png';
+
+import screenshot_simple from '../../Images/FlowGrid/screenshots/simpleChart.png';
+import screenshot_nested from '../../Images/FlowGrid/screenshots/nested.png';
+import screenshot_loop from '../../Images/FlowGrid/screenshots/loop.png';
 
 // constants -------------------------------------------------------------------
 
@@ -38,6 +43,11 @@ const techUsed = {
   "React.js": reactObject
 };
 
+const slideshowImages = [
+  {'img': screenshot_simple, 'title': 'Flowchart Maker', 'description': 'Build flowcharts in React.js. '},
+  {'img': screenshot_nested, 'title': 'Conditionals', 'description': 'Diagram branching and nested logic statements. '},
+  {'img': screenshot_loop, 'title': 'Loops', 'description': 'FlowGrid handles loops. FlowGrid handles loops. FlowGrid handles... '},
+];
 // =============================================================================
 // <FlowGridPage/>
 // =============================================================================
@@ -71,6 +81,11 @@ class FlowGridPage extends Component {
             highlightColor="#17e573"
           />
         </div>
+
+        <ImageSlideshow
+          images={slideshowImages}
+          highlightColor="#17e573"
+        />
       </div>
     );
   }
