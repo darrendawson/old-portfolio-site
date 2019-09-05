@@ -6,6 +6,7 @@ import './Page.css';
 import ProfileCard from '../ProfileCard/ProfileCard.js';
 import TechChart from '../TechChart/TechChart.js';
 import ItemCard from '../ItemCard/ItemCard.js';
+import ImageSlideshow from '../ImageSlideshow/ImageSlideshow.js';
 
 // images
 import img_dataFreeIcon from '../../Images/DataFree/datafree_icon.png';
@@ -14,6 +15,8 @@ import img_androidIcon from '../../Images/Logos/android_robot.png';
 import img_twilioIcon from '../../Images/Logos/twilio_red.png';
 import img_sinatraIcon from '../../Images/Logos/sinatra.png';
 
+import screenshot_appView from '../../Images/DataFree/screenshots/app_view.png';
+import screenshot_smsView from '../../Images/DataFree/screenshots/sms_view.png';
 
 // constants -------------------------------------------------------------------
 
@@ -70,6 +73,12 @@ const techUsed = {
   "Twilio API": twilioObject,
   "Sinatra & AWS": sinatraObject
 };
+
+const slideshowImages = [
+  {'img': screenshot_appView, 'title': 'An Intuitive Front End', 'description': 'The Android app coordinates SMS queries so the user can use it like any other network enabled app'},
+  {'img': screenshot_smsView, 'title': 'Behind the Scenes: SMS Network Protocols', 'description': 'The app performs a handshake with the Twilio server, collects all texts in the response, then decompresses the encoded response. '},
+];
+
 // =============================================================================
 // <DataFreePage/>
 // =============================================================================
@@ -103,6 +112,11 @@ class DataFreePage extends Component {
             highlightColor="#ea2727"
           />
         </div>
+
+        <ImageSlideshow
+          images={slideshowImages}
+          highlightColor="#ea2727"
+        />
       </div>
     );
   }
