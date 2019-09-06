@@ -3,6 +3,7 @@ import './App.css';
 
 // components
 import Sidebar from './Components/Sidebar/Sidebar.js';
+import Navbar from './Components/Navbar/Navbar.js';
 import AboutMePage from './Components/Pages/AboutMePage.js';
 import IndieOutreachPage from './Components/Pages/IndieOutreachPage.js';
 import ConjurePage from './Components/Pages/ConjurePage.js';
@@ -24,6 +25,18 @@ const pageOptions = {
   "Art": ["Redbubble"]
 }
 
+
+const pageColors = {
+  "About Me": "#19b1ea",
+  "IndieOutreach": "#6f3ce8",
+  "Data Free": "#ea2727",
+  "Conjure": "#eaac27",
+  "FlowGrid": "#17e573",
+  "Portfolio": "#19b1ea",
+  "Intuit 2018": "#19b1ea",
+  "Y Combinator (s2019)": "#ff6600",
+  "Redbubble": "#ea2727"
+};
 
 // =============================================================================
 // USTRA
@@ -145,7 +158,18 @@ class App extends Component {
 
     return (
       <div id="mobile_container">
-        {this.renderPages()}
+        <div id="top_container">
+          <Navbar
+            options={pageOptions}
+            selectedOption={truth[PT_selectedSection]}
+            update={this.update}
+            selectedOptionTag={PT_selectedSection}
+            pageColors={pageColors}
+          />
+        </div>
+        <div id="bottom_container">
+          {this.renderPages()}
+        </div>
       </div>
     );
   }

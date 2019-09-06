@@ -1,0 +1,48 @@
+#Navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#Navbar #title_row {
+  width: calc(100% - 30px);
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#Navbar #go_to_button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  padding: 0px 30px;
+  cursor: pointer;
+}
+
+#Navbar #options_dropdown_container {
+  width: calc(100% - 40px);
+  padding: 20px;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#Navbar  .options_container_row {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+#Navbar .option_container {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid white;
+  margin: 5px;
+  flex-grow: 0;
+}
