@@ -20,7 +20,7 @@
 }
 
 #TechChart #item_card_container {
-  height: 400px;
+  min-height: 400px;
   width: 500px;
   flex-grow: 1;
   margin: 10px;
