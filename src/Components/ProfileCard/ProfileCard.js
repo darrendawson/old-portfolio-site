@@ -52,7 +52,7 @@ class ProfileCard extends Component {
 
     return (
       <a href={this.props.viewButtonLink} target="_blank">
-        <button id="view_button" style={{'color': this.props.highlightColor, 'border-color': this.props.highlightColor}}>View</button>
+        <button id="view_button" style={{'color': this.props.highlightColor, 'border-color': this.props.highlightColor}}>View Site</button>
       </a>
     );
   }
