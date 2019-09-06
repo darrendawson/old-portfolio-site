@@ -14,7 +14,7 @@ class ItemCard extends Component {
     for (let i = 0; i < this.props.description.length; i++) {
 
       let textCSS = (this.props.description[i]['type'] === 'text') ? "regular_text" : "list_text";
-      
+
       description.push(
         <h3 className={textCSS}>{this.props.description[i]['text']}</h3>
       );
