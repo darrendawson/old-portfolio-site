@@ -49,10 +49,27 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      truth: ustra.getTruth()
+      truth: ustra.getTruth(),
+      windowWidth: 0,
+      windowHeight: 0,
     }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  // update Window sizes so <App/> will know whether it should render in mobile or landscape layout
+  updateWindowDimensions() {
+    this.setState({windowWidth: window.innerWidth, windowHeight: window.innerHeight});
+  }
 
   // Update Ustra --------------------------------------------------------------
   /*
@@ -93,14 +110,15 @@ class App extends Component {
 
   }
 
-  // renders <App/>
-  render() {
+
+  // if app is in a landscape configuration, render the normal Desktop mode with a sidebar
+  renderLandscape() {
+    if (this.state.windowWidth < this.state.windowHeight) { return; }
 
     let truth = this.state.truth;
 
     return (
-      <div id="App">
-
+      <div id="landscape_container">
         <div id="left_container">
           <Sidebar
             options={pageOptions}
@@ -113,7 +131,35 @@ class App extends Component {
         <div id="right_container">
           {this.renderPages()}
         </div>
+      </div>
+    );
 
+  }
+
+  // if app is in a vertical configuration, render the mobile layout
+  // -> this has a top navbar instead of a sidebar
+  renderMobile() {
+    if (this.state.windowWidth >= this.state.windowHeight) { return; }
+
+    let truth = this.state.truth;
+
+    return (
+      <div id="mobile_container">
+        {this.renderPages()}
+      </div>
+    );
+  }
+
+
+  // renders <App/>
+  render() {
+
+    let truth = this.state.truth;
+
+    return (
+      <div id="App">
+        {this.renderLandscape()}
+        {this.renderMobile()}
       </div>
     );
   }
