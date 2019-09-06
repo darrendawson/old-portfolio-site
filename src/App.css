@@ -38,10 +38,13 @@
 #App #mobile_container #top_container {
   width: 100%;
   flex-shrink: 0;
+  flex-grow: 0;
 }
 
 #App #mobile_container #bottom_container {
   width: 100%;
   flex-grow: 1;
   flex-shrink: 0;
+  overflow: auto;
+  scrollbar-width: none;
 }
