@@ -237,6 +237,7 @@ class AboutMePage extends Component {
           socialMediaLinks={socialMediaLinks}
           description={aboutMeDescription}
           viewButtonLink=""
+          highlightColor="#19b1ea"
         />
         {this.renderCategoryTitle("Skills")}
         {this.renderSkills()}

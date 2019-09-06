@@ -6,7 +6,7 @@ class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      expanded: true
+      expanded: false
     }
   }
 

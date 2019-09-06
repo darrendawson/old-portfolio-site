@@ -1,37 +1,43 @@
 #ProfileCard {
-  width: calc(100% - 40px - 10px);
+  width: calc(100% - 40px);
   display: flex;
   background-color: #282828;
   padding: 20px;
   border-radius: 5px;
-  border-right: 10px solid #19b1ea;
   box-shadow: 5px 10px 15px grey;
 }
 
-#ProfileCard #profile_img_column {
+/* Landscape -----------------------------------------------------------------*/
+
+#ProfileCard #landscape_container {
+  width: 100%;
+  display: flex;
+}
+
+#ProfileCard #landscape_container #profile_img_column {
   height: 100%;
   margin-right: 20px;
   border-radius: 5px;
 }
 
-#ProfileCard #profile_img_rounded {
+#ProfileCard #landscape_container #profile_img_rounded {
   width: 300px;
   border-radius: 150px;
   border: 1px solid black;
 }
 
-#ProfileCard #profile_img_no_border {
+#ProfileCard #landscape_container #profile_img_no_border {
   width: 150px;
 }
 
-#ProfileCard #title {
+#ProfileCard #landscape_container #title {
   font-size: 4em;
   margin: 0px;
   margin-right: 40px;
   color: white;
 }
 
-#ProfileCard .column {
+#ProfileCard #landscape_container .column {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,7 +45,7 @@
   align-items: flex-start;
 }
 
-#ProfileCard .row_space_between {
+#ProfileCard #landscape_container .row_space_between {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,27 +55,27 @@
   flex-wrap: wrap;
 }
 
-#ProfileCard .row {
+#ProfileCard #landscape_container .row {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
 
-#ProfileCard .social_media_img {
+#ProfileCard #landscape_container .social_media_img {
   height: 35px;
   cursor: pointer;
   margin: 20px 10px;
 }
 
-#ProfileCard .divider {
+#ProfileCard #landscape_container .divider {
   height: 3px;
   width: 100%;
   margin-bottom: 15px;
   background-image: linear-gradient(to right, #19b1ea, #282828);
 }
 
-#ProfileCard .description_text {
+#ProfileCard #landscape_container .description_text {
   font-size: 1.3em;
   font-style: italic;
   text-align: left;
@@ -77,7 +83,7 @@
   margin: 3px;
 }
 
-#ProfileCard #view_button {
+#ProfileCard #landscape_container #view_button {
   border: 1px solid #19b1ea;
   color: #19b1ea;
   background-color: #282828;
@@ -87,7 +93,69 @@
   font-size: 1.3em;
 }
 
-#ProfileCard #view_button:hover {
+#ProfileCard #landscape_container #view_button:hover {
   color: white;
   border-color: white;
+}
+
+
+/* Mobile --------------------------------------------------------------------*/
+
+#ProfileCard #mobile_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+#ProfileCard #mobile_container #profile_img_column {
+  width: 100%;
+}
+
+#ProfileCard #mobile_container #profile_img_rounded {
+  width: 300px;
+  border-radius: 150px;
+  border: 1px solid black;
+}
+
+#ProfileCard #mobile_container #profile_img_no_border {
+  width: 150px;
+}
+
+#ProfileCard #mobile_container #title {
+  border-bottom: 2px solid white;
+  color: white;
+  padding: 0px 30px;
+}
+
+#ProfileCard #mobile_container #social_media_links_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#ProfileCard #mobile_container .social_media_img {
+  width: 30px;
+  margin: 0px 10px 5px 10px;
+}
+
+#ProfileCard #mobile_container #description_container {
+  width: calc(100% - 20px);
+  padding: 0px 10px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  color: grey;
+}
+
+
+#ProfileCard #mobile_container #view_button {
+  font-size: 1.3em;
+  margin-top: 10px;
 }
