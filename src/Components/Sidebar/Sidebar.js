@@ -7,6 +7,14 @@ class Sidebar extends Component {
     super();
   }
 
+  getPageColor = (optionName = this.props.selectedOption) => {
+    if (optionName in this.props.pageColors) {
+      return (this.props.pageColors[optionName]);
+    } else {
+      return '#19b1ea';
+    }
+  }
+
   // onClick -------------------------------------------------------------------
 
   onClick_selectSection = (section) => {
@@ -17,22 +25,6 @@ class Sidebar extends Component {
 
   // render --------------------------------------------------------------------
 
-  // returns the right color corresponding to an option
-  // ex: option='IndieOutreach' will return IndieOutreach's purple
-  // this is called so the selected option in <Sidebar/> has the right color
-  getSelectedColor = (option) => {
-    if (option === "About Me") {
-      return '#19b1ea';
-    } else if (option === "IndieOutreach") {
-      return '#6f3ce8';
-    } else if (option === "Conjure") {
-      return '#eaac27';
-    } else if (option === "Data Free") {
-      return '#ea2727';
-    } else if (option === "FlowGrid") {
-      return '#17e573';
-    }
-  }
 
 
   renderOptions = () => {
@@ -53,7 +45,7 @@ class Sidebar extends Component {
       for (let i = 0; i < listOfOptions.length; i++) {
         if (this.props.selectedOption === listOfOptions[i]) {
           optionsToRender.push(
-            <div className="selected_option_container" style={{'background-color': this.getSelectedColor(this.props.selectedOption)}}>
+            <div className="selected_option_container" style={{'background-color': this.getPageColor(this.props.selectedOption)}}>
               <h2 className="option_title_white">{listOfOptions[i]}</h2>
             </div>
           );

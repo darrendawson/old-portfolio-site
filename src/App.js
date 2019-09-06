@@ -138,6 +138,7 @@ class App extends Component {
             selectedOption={truth[PT_selectedSection]}
             update={this.update}
             selectedOptionTag={PT_selectedSection}
+            pageColors={pageColors}
           />
         </div>
 
