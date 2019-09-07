@@ -37,3 +37,10 @@
   margin: 15px;
   height: 500px;
 }
+
+#Page .item_card_container_tall {
+  width: 30%;
+  min-width: 400px;
+  margin: 15px;
+  height: 550px;
+}

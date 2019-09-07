@@ -105,6 +105,28 @@ class AboutMePage extends Component {
 
   constructor() {
     super();
+
+    this.state = {
+      windowWidth: 0,
+      windowHeight: 0
+    }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+
+  // Window Orientation --------------------------------------------------------
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({windowWidth: window.innerWidth, windowHeight: window.innerHeight});
   }
 
   // render --------------------------------------------------------------------
@@ -121,9 +143,15 @@ class AboutMePage extends Component {
   }
 
   renderSkills = () => {
+
+    let marginStyles = {};
+    if (this.state.windowWidth >= this.state.windowHeight) {
+      marginStyles['margin-top'] = '80px';
+    }
+
     return (
       <div className="item_cards_row">
-        <div className="item_card_container" style={{'margin-top': '80px'}}>
+        <div className="item_card_container" style={marginStyles}>
           <ItemCard
             titleText="Frontend"
             subtitleText=""
@@ -143,7 +171,7 @@ class AboutMePage extends Component {
             highlightColor="#19b1ea"
           />
         </div>
-        <div className="item_card_container" style={{'margin-top': '80px'}}>
+        <div className="item_card_container" style={marginStyles}>
           <ItemCard
             titleText="Backend"
             subtitleText=""
@@ -188,9 +216,15 @@ class AboutMePage extends Component {
 
 
   renderPlan = () => {
+
+    let marginStyles = {};
+    if (this.state.windowWidth >= this.state.windowHeight) {
+      marginStyles['margin-top'] = '80px';
+    }
+
     return (
       <div className="item_cards_row">
-        <div className="item_card_container" style={{'margin-top': '80px'}}>
+        <div className="item_card_container_tall" style={marginStyles}>
           <ItemCard
             titleText="0 Year Plan"
             subtitleText="What I'm Doing Now"
@@ -200,7 +234,7 @@ class AboutMePage extends Component {
             highlightColor="#19b1ea"
           />
         </div>
-        <div className="item_card_container">
+        <div className="item_card_container_tall">
           <ItemCard
             titleText="1 Year Plan"
             subtitleText="Post College Plans"
@@ -210,7 +244,7 @@ class AboutMePage extends Component {
             highlightColor="#19b1ea"
           />
         </div>
-        <div className="item_card_container" style={{'margin-top': '80px'}}>
+        <div className="item_card_container_tall" style={marginStyles}>
           <ItemCard
             titleText="5 Year Plan"
             subtitleText="What I'm Working Towards"
