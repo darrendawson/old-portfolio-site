@@ -169,7 +169,9 @@ class App extends Component {
           />
         </div>
         <div id="bottom_container">
-          {this.renderPages()}
+          <div id="body_scroll_container">
+            {this.renderPages()}
+          </div>
         </div>
       </div>
     );

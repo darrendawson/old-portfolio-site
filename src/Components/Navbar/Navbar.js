@@ -67,7 +67,7 @@ class Navbar extends Component {
             className="option_container"
             style={optionStyle}
             onClick={() => this.onClick_selectSection(listOfOptions[i])}>
-            <h2 style={{'color': 'inherit'}}>{listOfOptions[i]}</h2>
+            <h2 style={{'color': 'inherit', 'margin': '0px'}}>{listOfOptions[i]}</h2>
           </div>
         );
       }
@@ -96,7 +96,7 @@ class Navbar extends Component {
 
     return (
       <div id="title_row" style={{'background-color': this.getPageColor()}}>
-        <h1 style={{'color': 'white'}}>{this.props.selectedOption}</h1>
+        <h1 style={{'color': 'white', 'margin': '0px'}}>{this.props.selectedOption}</h1>
         <button
           id="go_to_button"
           onClick={() => this.setState({expanded: !this.state.expanded})}>

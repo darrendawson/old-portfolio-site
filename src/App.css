@@ -43,8 +43,11 @@
 
 #App #mobile_container #bottom_container {
   width: 100%;
-  flex-grow: 1;
-  flex-shrink: 0;
+  height: 100%;
   overflow: auto;
   scrollbar-width: none;
+}
+
+#App #mobile_container #body_scroll_container {
+  width: 100%;
 }

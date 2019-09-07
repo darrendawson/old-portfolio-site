@@ -6,17 +6,23 @@
 
 #Navbar #title_row {
   width: calc(100% - 30px);
+  height: 55px;
   padding: 0px 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 #Navbar #go_to_button {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: inherit;
   border: none;
   color: white;
-  padding: 0px 30px;
   cursor: pointer;
 }
 
