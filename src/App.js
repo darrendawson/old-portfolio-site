@@ -10,6 +10,7 @@ import ConjurePage from './Components/Pages/ConjurePage.js';
 import DataFreePage from './Components/Pages/DataFreePage.js';
 import FlowGridPage from './Components/Pages/FlowGridPage.js';
 import PortfolioPage from './Components/Pages/PortfolioPage.js';
+import RedbubblePage from './Components/Pages/RedbubblePage.js';
 
 // Ustra for handling App.state
 import Ustra from './Ustra.js';
@@ -17,11 +18,20 @@ import Ustra from './Ustra.js';
 
 // Other constants -------------------------------------------------------------
 
+/*
 const pageOptions = {
   "About": ["About Me"],
   "Products": ["IndieOutreach", "Data Free"],
   "Projects": ["Conjure", "FlowGrid", "Portfolio"],
   "Hackathons": ["Intuit 2018", "Y Combinator (s2019)"],
+  "Art": ["Redbubble"]
+}
+*/
+
+const pageOptions = {
+  "About": ["About Me"],
+  "Products": ["IndieOutreach", "Data Free"],
+  "Projects": ["Conjure", "FlowGrid", "Portfolio"],
   "Art": ["Redbubble"]
 }
 
@@ -48,7 +58,7 @@ const pageColors = {
 const PT_selectedSection = "selectedSection";
 
 const dataSkeleton = {
-  [PT_selectedSection]: "About Me"
+  [PT_selectedSection]: "Redbubble"
 };
 
 var ustra = new Ustra(dataSkeleton);
@@ -103,9 +113,7 @@ class App extends Component {
 
 
   //
-  renderPages = () => {
-
-    let currentPage = this.state.truth[PT_selectedSection];
+  renderPage = (currentPage = this.state.truth[PT_selectedSection]) => {
 
     if (currentPage === "About Me") {
       return (<AboutMePage/>);
@@ -119,8 +127,9 @@ class App extends Component {
       return (<FlowGridPage/>);
     } else if (currentPage === "Portfolio") {
       return (<PortfolioPage/>);
+    } else if (currentPage === "Redbubble") {
+      return (<RedbubblePage/>);
     }
-
   }
 
 
@@ -143,7 +152,7 @@ class App extends Component {
         </div>
 
         <div id="right_container">
-          {this.renderPages()}
+          {this.renderPage()}
         </div>
       </div>
     );
@@ -170,7 +179,7 @@ class App extends Component {
         </div>
         <div id="bottom_container">
           <div id="body_scroll_container">
-            {this.renderPages()}
+            {this.renderPage()}
           </div>
         </div>
       </div>
