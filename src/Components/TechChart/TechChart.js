@@ -146,7 +146,7 @@ class TechChart extends Component {
 
       if (i + 1 < order.length) {
         mathToRender.push(
-          <div className="tech_item">
+          <div className="tech_item_plus">
             <h1>+</h1>
           </div>
         );

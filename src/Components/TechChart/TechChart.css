@@ -79,6 +79,15 @@
   align-items: center;
 }
 
+#TechChart #landscape_container .tech_item_plus {
+  width: 100px;
+  height: 160px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+}
+
 /* Mobile ------------------------------------------------------------------- */
 
 #TechChart #mobile_container {

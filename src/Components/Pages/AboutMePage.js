@@ -33,7 +33,8 @@ const aboutMeDescription = [
   "Hello there!",
   "I am a fullstack developer, an avid product designer, and an undergrad at UCSC. ",
   "I am most proud of my work on IndieOutreach; I'm actively working on Conjure. ",
-  "Thanks for visiting my portfolio site. You can reach me at thedarrendawson@gmail.com."
+  "You can reach me at thedarrendawson@gmail.com.",
+  "Thanks for visiting my portfolio site."
 ];
 
 const frontendDescription = [

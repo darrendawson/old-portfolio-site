@@ -17,6 +17,7 @@ import img_sinatraIcon from '../../Images/Logos/sinatra.png';
 
 import screenshot_appView from '../../Images/DataFree/screenshots/app_view.png';
 import screenshot_smsView from '../../Images/DataFree/screenshots/sms_view.png';
+import screenshot_smsHandshake from '../../Images/DataFree/screenshots/sms_handshake.png';
 
 // constants -------------------------------------------------------------------
 
@@ -75,8 +76,9 @@ const techUsed = {
 };
 
 const slideshowImages = [
-  {'img': screenshot_appView, 'title': 'An Intuitive Front End', 'description': 'The Android app coordinates SMS queries so the user can use it like any other network enabled app'},
-  {'img': screenshot_smsView, 'title': 'Behind the Scenes: SMS Network Protocols', 'description': 'The app performs a handshake with the Twilio server, collects all texts in the response, then decompresses the encoded response. '},
+  {'img': screenshot_appView, 'title': 'An Intuitive Front End', 'description': 'The Android app coordinates SMS queries so you can use it like any other network enabled app.'},
+  {'img': screenshot_smsHandshake, 'title': 'Behind the Scenes: Handshakes', 'description': 'The app performs a handshake with the Twilio server to account for network conditions. '},
+  {'img': screenshot_smsView, 'title': 'Behind the Scenes: Decoding', 'description': 'The app collects all inbound messages and then decompresses the encoded response. '},
 ];
 
 // =============================================================================

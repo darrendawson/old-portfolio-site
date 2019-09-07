@@ -93,9 +93,9 @@ const techUsed = {
 
 const slideshowImages = [
   {'img': screenshot_searchParameters, 'title': 'Search Parameters', 'description': 'Searching on IndieOutreach is as simple as describing details about your game.'},
-  {'img': screenshot_searchFilters, 'title': 'Filter Streamers', 'description': 'There a *lot* of streamers on Twitch. Set hard filters to focus your efforts. '},
+  {'img': screenshot_searchFilters, 'title': 'Filter Streamers', 'description': 'There are a *lot* of streamers on Twitch. Set hard filters to focus your efforts. '},
   {'img': screenshot_resultCards, 'title': 'Browse Results', 'description': 'Quickly browse through all streamers that match your search. '},
-  {'img': screenshot_streamerOverview, 'title': 'Streamer Overview', 'description': 'View at a glance data about a streamer\'s gameplay habits to see if they\'d be a good fit.'},
+  {'img': screenshot_streamerOverview, 'title': 'Streamer Overview', 'description': 'View at-a-glance data about a streamer\'s gameplay habits to see if they\'d be a good fit.'},
   {'img': screenshot_relatedToSearch, 'title': 'Related to Search', 'description': 'IndieOutreach highlights any games a streamer played that might be relevant to your search. '}
 ];
 
