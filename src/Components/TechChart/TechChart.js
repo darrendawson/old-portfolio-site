@@ -4,19 +4,6 @@ import './TechChart.css';
 import ItemCard from '../ItemCard/ItemCard.js';
 
 
-// constants -------------------------------------------------------------------
-
-const nodeMargins = ['150px', '250px', '50px', '200px', '100px', '200px'];
-const edgeMargins = ['210px', '100px', '100px', '150px', '150px', '100px'];
-const edgeDimensions = [
-  {'x1': '0', 'y1': '0', 'x2': '100', 'y2': '90'},
-  {'x1': '0', 'y1': '200', 'x2': '100', 'y2': '0'},
-  {'x1': '0', 'y1': '0', 'x2': '100', 'y2': '150'},
-  {'x1': '0', 'y1': '100', 'x2': '100', 'y2': '0'},
-  {'x1': '0', 'y1': '0', 'x2': '100', 'y2': '100'}
-];
-
-
 // <TechChart/> ----------------------------------------------------------------
 
 class TechChart extends Component {
@@ -71,73 +58,6 @@ class TechChart extends Component {
     }
   }
 
-  // render Chart --------------------------------------------------------------
-
-  getNodeTopMargin = (nodeIndex) => {
-    let index = nodeIndex % nodeMargins.length;
-    return nodeMargins[index];
-  }
-
-  getEdgeTopMargin = (edgeIndex) => {
-    let index = edgeIndex % edgeMargins.length;
-    return edgeMargins[index];
-  }
-
-  getEdgeDimensions = (edgeIndex) => {
-    let index = edgeIndex % edgeDimensions.length;
-    return edgeDimensions[index];
-  }
-
-  renderNode = (nodeID, nodeDetails, nodeIndex) => {
-
-    let nodeStyling = {};
-    if (nodeID === this.getSelectedSection()) {
-      nodeStyling['border'] = "4px solid " + this.props.highlightColor;
-    }
-
-    return (
-      <div
-        className="node_column"
-        style={{'margin-top': this.getNodeTopMargin(nodeIndex)}}
-        onClick={() => this.onClick_selectSection(nodeID)}>
-        <img className="item_image" style={nodeStyling} src={nodeDetails.icon}/>
-        <h3>{nodeDetails.title}</h3>
-      </div>
-    );
-  }
-
-  renderEdge = (edgeIndex) => {
-    let edge = this.getEdgeDimensions(edgeIndex);
-    return (
-      <svg height="500" width="100" style={{'margin-top': this.getEdgeTopMargin(edgeIndex)}}>
-         <line x1={edge.x1} y1={edge.y1} x2={edge.x2} y2={edge.y2} style={{'stroke': this.props.highlightColor, 'stroke-width': '2'}} />
-       </svg>
-    );
-  }
-
-
-  renderChart = () => {
-
-    if (! this.props.renderChart ) { return; }
-
-    let chartToRender = [];
-    for (let i = 0; i < this.props.order.length; i++) {
-      let nodeKey = this.props.order[i];
-      if (nodeKey in this.props.tech) {
-        chartToRender.push(this.renderNode(nodeKey, this.props.tech[nodeKey], i));
-        if (i + 1 !== this.props.order.length) {
-          chartToRender.push(this.renderEdge(i));
-        }
-      }
-    }
-    return (
-      <div id="chart_container">
-        {chartToRender}
-      </div>
-    );
-  }
-
-
   // Render Math ---------------------------------------------------------------
 
   renderMathNode = (nodeID, nodeDetails) => {
@@ -156,9 +76,6 @@ class TechChart extends Component {
   }
 
   renderMath = () => {
-
-    if (this.props.renderChart) { return; }
-
 
     // filter out items that weren't written with the selectedLanguage
     let order = this.getOrderForLanguage(this.state.selectedLanguage);
@@ -250,7 +167,6 @@ class TechChart extends Component {
           <div id="chart_title_row" style={{'padding-left': '55px', 'margin-top': '10px'}}>
             {this.renderLanguagesUsed()}
           </div>
-          {this.renderChart()}
           {this.renderMath()}
         </div>
 
