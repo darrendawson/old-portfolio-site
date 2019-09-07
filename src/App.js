@@ -58,7 +58,7 @@ const pageColors = {
 const PT_selectedSection = "selectedSection";
 
 const dataSkeleton = {
-  [PT_selectedSection]: "Redbubble"
+  [PT_selectedSection]: "About Me"
 };
 
 var ustra = new Ustra(dataSkeleton);
