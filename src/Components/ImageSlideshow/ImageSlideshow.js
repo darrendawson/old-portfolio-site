@@ -1,6 +1,49 @@
 import React, { Component } from 'react';
 import './ImageSlideshow.css';
 
+
+// =============================================================================
+// <ZoomedInImage/>
+// =============================================================================
+
+class ZoomedInImage extends Component {
+  constructor() {
+    super();
+    this.scrollTargetRef = false;
+  }
+
+  componentDidMount() {
+    this.scrollToCenter();
+  }
+
+  componentDidUpdate() {
+    this.scrollToCenter();
+  }
+
+  scrollToCenter = (targetRef = this.scrollTargetRef) => {
+    // set scroll on a short timer so it targetRef will be valid
+    setTimeout(function() {
+      targetRef.scrollIntoView({behavior: "smooth"});
+    }, 1000);
+  }
+
+  render() {
+    return (
+      <div id="zoomed_in_page_container" onClick={this.props.onClick_expandImage}>
+        <div id="zoomed_in_image_container">
+          <div id="scroll_target" ref={ (el) => {this.scrollTargetRef = el; }}></div>
+          <img id="zoomed_in_image" src={this.props.image.img}/>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+// =============================================================================
+// <ImageSlideshow/>
+// =============================================================================
+
 class ImageSlideshow extends Component {
 
   constructor() {
@@ -35,6 +78,7 @@ class ImageSlideshow extends Component {
     window.removeEventListener('resize', this.updateWindowDimensions);
     clearInterval(this.timerID);
   }
+
 
   tick() {
 
@@ -109,13 +153,19 @@ class ImageSlideshow extends Component {
     let image = this.getCurrentImage();
 
     return (
-      <div id="zoomed_in_page_container" onClick={this.onClick_expandImage}>
-        <div id="zoomed_in_image_container">
-          <img id="zoomed_in_image" src={image.img}/>
-        </div>
-      </div>
+      <ZoomedInImage image={image} onClick_expandImage={this.onClick_expandImage}/>
     );
   }
+
+  // renders a message telling the user that they can click on a photo to zoom in
+  renderZoomInText = () => {
+    if (this.state.windowWidth >= this.state.windowHeight) { return; }
+    return (
+      <p>Click on image to zoom</p>
+    );
+  }
+
+
 
   // render --------------------------------------------------------------------
 
@@ -160,6 +210,7 @@ class ImageSlideshow extends Component {
           </div>
           <img id="image" src={image.img} onClick={this.onClick_expandImage}/>
         </div>
+        {this.renderZoomInText()}
 
         {this.renderSelectImageButtons()}
         {this.renderZoomed()}

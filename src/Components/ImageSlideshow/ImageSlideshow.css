@@ -83,10 +83,18 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background-color: black;
   overflow: auto;
+}
+
+#ImageSlideshow #zoomed_in_page_container #scroll_target {
+  margin-left: 780px;
+  height: 1px;
+  width: 1px;
+  background-color: inherit;
 }
 
 #ImageSlideshow #zoomed_in_page_container #zoomed_in_image {
