@@ -205,8 +205,8 @@ class ImageSlideshow extends Component {
       <div id="ImageSlideshow">
         <div id="image_container">
           <div id="title_container">
-            <h1 id="img_title">{image.title}</h1>
-            <h3 id="img_description">{image.description}</h3>
+            <h2 id="img_title">{image.title}</h2>
+            <p id="img_description">{image.description}</p>
           </div>
           <img id="image" src={image.img} onClick={this.onClick_expandImage}/>
         </div>
