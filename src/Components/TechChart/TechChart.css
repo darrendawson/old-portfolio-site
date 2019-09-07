@@ -53,6 +53,8 @@
 #TechChart #landscape_container .item_image {
   padding: 5px;
   cursor: pointer;
+  width: 100px;
+  height: 100px;
 }
 
 /* Landscape -----------------------------------------------------------------*/
