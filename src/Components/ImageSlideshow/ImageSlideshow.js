@@ -132,13 +132,25 @@ class ImageSlideshow extends Component {
 
   // for when a user clicks on a different image in order to switch to it
   onClick_selectImageFromGallery = (index) => {
-    if (index < this.props.images.length) {
+    if (index < 0) {
+      this.setState({'imageIndex': this.props.images.length - 1});
+    } else if (index < this.props.images.length) {
       this.setState({'imageIndex': index, 'seconds': 0});
     } else {
       this.setState({'imageIndex': 0, 'seconds': 0});
     }
   }
 
+
+  onClick_moveToNextImage = () => {
+    let index = this.getCurrentImageIndex();
+    this.onClick_selectImageFromGallery(index + 1);
+  }
+
+  onClick_moveToPrevImage = () => {
+    let index = this.getCurrentImageIndex();
+    this.onClick_selectImageFromGallery(index - 1);
+  }
 
   // when a user clicks on an image with the intent to expand it
   onClick_expandImage = (index = this.state.imageIndex) => {
@@ -176,6 +188,9 @@ class ImageSlideshow extends Component {
 
 
   renderSelectImageButtons = () => {
+    
+    if (this.props.images.length <= 1) { return; }
+
     let buttons = [];
     let selectedIndex = this.getCurrentImageIndex();
 
@@ -200,6 +215,34 @@ class ImageSlideshow extends Component {
     );
   }
 
+  // divs that are overlayed ontop of the current image so user can click them to move
+  renderMoveButtons = () => {
+
+    if (this.state.zoomInActive) { return; }
+    if (! this.state.mouseHoverActive && (this.state.windowWidth >= this.state.windowHeight)) { return; }
+    if (this.props.images.length <= 1) { return; }
+
+    let leftArrow = "<";
+    let rightArrow = ">";
+    let containerCSS = "";
+    if (this.state.windowWidth >= this.state.windowHeight) {
+      containerCSS = "fade_in";
+    }
+
+    return (
+      <div id="move_buttons_container">
+        <div id="absolute_position" className={containerCSS}>
+          <div className="overlay_column" onClick={this.onClick_moveToPrevImage}>
+            <h1 className="overlay_button">{leftArrow}</h1>
+          </div>
+          <div className="overlay_zoom_in_button" onClick={this.onClick_expandImage}></div>
+          <div className="overlay_column" onClick={this.onClick_moveToNextImage}>
+            <h1 className="overlay_button">{rightArrow}</h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Renders <ImageSlideshow/>
   render() {
@@ -208,15 +251,19 @@ class ImageSlideshow extends Component {
 
     return (
       <div id="ImageSlideshow">
-        <div
-          id="image_container"
-          onMouseEnter={() => this.setState({'mouseHoverActive': true})}
-          onMouseLeave={() => this.setState({'mouseHoverActive': false})}>
+        <div id="image_container">
           <div id="title_container">
             <h2 id="img_title">{image.title}</h2>
             <p id="img_description">{image.description}</p>
           </div>
-          <img id="image" src={image.img} onClick={this.onClick_expandImage}/>
+
+          <div id="image_positioning_container"
+            onMouseEnter={() => this.setState({'mouseHoverActive': true})}
+            onMouseLeave={() => this.setState({'mouseHoverActive': false})}>
+            <img id="image" src={image.img} onClick={this.onClick_expandImage}/>
+            {this.renderMoveButtons()}
+          </div>
+
         </div>
         {this.renderZoomInText()}
 
