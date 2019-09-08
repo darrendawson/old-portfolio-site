@@ -54,7 +54,8 @@ class ImageSlideshow extends Component {
       seconds: 0,
       windowWidth: 0,
       windowHeight: 0,
-      zoomInActive: false
+      zoomInActive: false,
+      mouseHoverActive: false
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -85,6 +86,10 @@ class ImageSlideshow extends Component {
     // if we are in zoom in mode in mobile, dont tick
     if (this.state.zoomInActive && (this.state.windowWidth < this.state.windowHeight)) { return; }
 
+    // if user is hovering over the image, don't tick
+    if (this.state.mouseHoverActive) { return; }
+
+    // otherwise, tick away
     if (this.state.seconds > 5) {
       this.setState({'seconds': 0, 'imageIndex': this.getNextImageIndex()});
     } else {
@@ -203,7 +208,10 @@ class ImageSlideshow extends Component {
 
     return (
       <div id="ImageSlideshow">
-        <div id="image_container">
+        <div
+          id="image_container"
+          onMouseEnter={() => this.setState({'mouseHoverActive': true})}
+          onMouseLeave={() => this.setState({'mouseHoverActive': false})}>
           <div id="title_container">
             <h2 id="img_title">{image.title}</h2>
             <p id="img_description">{image.description}</p>
