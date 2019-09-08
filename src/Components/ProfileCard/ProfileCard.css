@@ -31,7 +31,7 @@
 }
 
 #ProfileCard #landscape_container #title {
-  font-size: 4em;
+  font-size: 3.5em;
   margin: 0px;
   margin-right: 40px;
   color: white;
@@ -76,7 +76,7 @@
 }
 
 #ProfileCard #landscape_container .description_text {
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-style: italic;
   text-align: left;
   color: #bfbfbf;

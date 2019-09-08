@@ -36,32 +36,31 @@
 
 
 #ItemCard #item_card_title {
-  font-size: 2.0em;
+  font-size: 1.7em;
   color: white;
   margin: 0px;
 }
 
 #ItemCard #item_card_subtitle {
-  font-size: 1.5em;
-  color: #eaeaea;
-  font-style: italic;
+  font-size: 1.3em;
+  color: grey;
   margin: 0px;
 }
 
 #ItemCard #footer_text {
   margin-bottom: 10px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: center;
 }
 
 #ItemCard .regular_text {
   color: white;
   margin: 40px 20px 0px 20px;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 #ItemCard .list_text {
   color: #eaeaea;
   margin: 5px 40px;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }

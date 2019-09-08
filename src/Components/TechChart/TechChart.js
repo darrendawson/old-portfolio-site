@@ -99,7 +99,7 @@ class TechChart extends Component {
       <div id="landscape_container">
         <div id="card_container">
           <div id="chart_title_row">
-            <h1 style={{'color': this.props.highlightColor, 'text-align': 'left', 'margin': '0px 40px 0px 0px', 'font-size': '3.5em'}}>Tech Stack</h1>
+            <h1 style={{'color': this.props.highlightColor, 'text-align': 'left', 'margin': '0px 40px 0px 0px', 'font-size': '2.5em'}}>Tech Stack</h1>
           </div>
 
           <div id="chart_title_row" style={{'padding-left': '55px', 'margin-top': '10px'}}>
@@ -143,7 +143,7 @@ class TechChart extends Component {
       let nodeID = order[i];
       let nodeDetails = this.props.tech[nodeID];
       mathToRender.push(this.renderTechItem(nodeID, nodeDetails));
-
+      /*
       if (i + 1 < order.length) {
         mathToRender.push(
           <div className="tech_item_plus">
@@ -151,6 +151,7 @@ class TechChart extends Component {
           </div>
         );
       }
+      */
     }
 
     return (
