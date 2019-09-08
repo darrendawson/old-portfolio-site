@@ -119,14 +119,14 @@ class TechChart extends Component {
 
   renderTechItem = (nodeID, nodeDetails) => {
 
-    let nodeStyling = {'border': '4px solid transparent'};
+    let nodeStyling = {'border': '2px solid transparent'};
     if (nodeID === this.getSelectedSection()) {
-      nodeStyling['border'] = "4px solid " + this.props.highlightColor;
+      nodeStyling['border'] = "2px solid " + this.props.highlightColor;
     }
 
     return (
       <div className="tech_item" onClick={() => this.onClick_selectSection(nodeID)}>
-        <img className="item_image" style={nodeStyling} src={nodeDetails.icon}/>
+        <img onMouseEnter={() => this.onClick_selectSection(nodeID)} className="item_image" style={nodeStyling} src={nodeDetails.icon}/>
         <h3>{nodeDetails.title}</h3>
       </div>
     );

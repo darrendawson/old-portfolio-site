@@ -155,7 +155,7 @@ class AboutMePage extends Component {
       <div className="item_cards_row">
         <div className="item_card_container" style={marginStyles}>
           <ItemCard
-            titleText="Frontend"
+            titleText="Front-End"
             subtitleText=""
             footerText=""
             description={frontendDescription}
@@ -177,7 +177,7 @@ class AboutMePage extends Component {
         </div>
         <div className="item_card_container" style={marginStyles}>
           <ItemCard
-            titleText="Backend"
+            titleText="Back-End"
             subtitleText=""
             footerText=""
             description={backendDescription}
