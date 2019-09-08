@@ -27,8 +27,9 @@ import screenshot_relatedToSearch from '../../Images/IndieOutreach/screenshots/r
 const indieOutreachDescription = [
   "IndieOutreach is a free PR search engine that helps indie game developers promote their games on Twitch.",
   "IndieOutreach sorts through the streaming histories of 150k streamers to find the ones that are most likely to play your game!",
-  "To date, over 300 indie devs have performed searches. ",
-  "Try it out at https://www.indieoutreach.io"
+  "I started working on IndieOutreach after doing PR for an indie game on Kickstarter and finding the process incredibly inefficient and overly tedious.",
+  "To date, over 300 indie devs have used IndieOutreach to promote their game. ",
+  "Try it out at www.indieoutreach.io"
 ];
 
 const twitchObject = {

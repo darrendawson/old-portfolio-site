@@ -92,7 +92,12 @@ class Navbar extends Component {
   renderTitleRow = () => {
 
     // function for rendering the GoTo button (user clicks to expand <Navbar/>)
-    let goToButtonText = (this.state.expanded) ? "Done" : "GoTo";
+    let goToButtonText;
+    if (this.state.expanded) {
+      goToButtonText = (<h1 style={{'color': '#282828'}}>&#9776;</h1>);
+    } else {
+      goToButtonText = (<h1 style={{'color': 'white'}}>&#9776;</h1>);
+    }
 
     return (
       <div id="title_row" style={{'background-color': this.getPageColor()}}>
@@ -100,9 +105,7 @@ class Navbar extends Component {
         <button
           id="go_to_button"
           onClick={() => this.setState({expanded: !this.state.expanded})}>
-          <h1>
-            {goToButtonText}
-          </h1>
+          {goToButtonText}
         </button>
 
       </div>

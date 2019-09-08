@@ -79,7 +79,7 @@
   font-size: 1.1em;
   font-style: italic;
   text-align: left;
-  color: #bfbfbf;
+  color: #c6c6c6;
   margin: 3px;
 }
 
@@ -151,9 +151,12 @@
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  color: grey;
+  color: #c6c6c6;
 }
 
+#ProfileCard #mobile_container .description_text {
+  margin: 7px 0px;
+}
 
 #ProfileCard #mobile_container #view_button {
   font-size: 1.3em;

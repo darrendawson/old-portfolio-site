@@ -32,9 +32,10 @@ const socialMediaLinks = [
 const aboutMeDescription = [
   "Hello there!",
   "I am a fullstack developer, an avid product designer, and an undergrad at UCSC. ",
-  "I am most proud of my work on IndieOutreach; I'm actively working on Conjure. ",
+  "I made www.indieoutreach.io - a PR search engine that helps indie game devs succeed on Twitch.  ",
+  "I'm currently building a project generator named Conjure. Check back here for updates. ",
   "You can reach me at thedarrendawson@gmail.com.",
-  "Thanks for visiting my portfolio site."
+  "Thanks for visiting my portfolio site!"
 ];
 
 const frontendDescription = [

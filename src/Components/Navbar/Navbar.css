@@ -51,4 +51,5 @@
   border: 1px solid white;
   margin: 5px;
   flex-grow: 0;
+  cursor: pointer;
 }

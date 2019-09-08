@@ -44,7 +44,7 @@ class ProfileCard extends Component {
         <div className="column">
           <div className="row_space_between">
             <div className="row">
-              <h1 id="title">{this.props.title}</h1>
+              {this.renderTitle()}
               {this.renderLandscape_SocialMediaLinks()}
             </div>
             {this.renderLandscape_ViewButton()}
@@ -122,7 +122,7 @@ class ProfileCard extends Component {
     return (
       <div id="mobile_container">
         {this.renderMobile_profileImage()}
-        <h1 id="title" style={{'border-color': this.props.highlightColor}}>{this.props.title}</h1>
+        {this.renderTitle()}
         {this.renderMobile_socialMediaLinks()}
         {this.renderMobile_descriptionText()}
         {this.renderMobile_viewButton()}
@@ -196,6 +196,21 @@ class ProfileCard extends Component {
 
 
   // render <ProfileCard/> -----------------------------------------------------
+
+  renderTitle = () => {
+    if (this.props.viewButtonLink !== "") {
+      return (
+        <a style={{'text-decoration': 'none'}} href={this.props.viewButtonLink} target="_blank">
+          <h1 id="title" style={{'border-color': this.props.highlightColor}}>{this.props.title}</h1>
+        </a>
+      );
+    } else {
+      return (
+        <h1 id="title" style={{'border-color': this.props.highlightColor}}>{this.props.title}</h1>
+      );
+    }
+  }
+
 
   // Renders <ProfileCard/>
   render() {
