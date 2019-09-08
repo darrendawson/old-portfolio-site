@@ -187,6 +187,7 @@ class TechChart extends Component {
         description={card.description}
         footerText={footerText}
         highlightColor={this.props.highlightColor}
+        renderAsLists={true}
       />
     );
   }

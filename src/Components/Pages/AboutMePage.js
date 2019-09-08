@@ -33,7 +33,7 @@ const aboutMeDescription = [
   "Hello there!",
   "I am a fullstack developer, an avid product designer, and an undergrad at UCSC. ",
   "I made www.indieoutreach.io - a PR search engine that helps indie game devs succeed on Twitch.  ",
-  "I'm currently building a project generator named Conjure. Check back here for updates. ",
+  "I'm currently building a project generator called Conjure. Check back here for updates. ",
   "You can reach me at thedarrendawson@gmail.com.",
   "Thanks for visiting my portfolio site!"
 ];
@@ -81,7 +81,7 @@ const zeroYearPlan = [
   {"type": "list", "text": "Developing Conjure"},
   {"type": "list", "text": "Exploring business opportunities for Conjure"},
   {"type": "text", "text": "Job Hunting"},
-  {"type": "list", "text": "Applying for jobs in Product Management + Development"},
+  {"type": "list", "text": "Applying for jobs in Product Management & Development"},
   {"type": "text", "text": "Academics"},
   {"type": "list", "text": "Graduate from UCSC"}
 ];
@@ -161,6 +161,7 @@ class AboutMePage extends Component {
             description={frontendDescription}
             backgroundImage={img_reactSkillBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
         <div className="item_card_container">
@@ -171,6 +172,7 @@ class AboutMePage extends Component {
             description={languagesDescription}
             backgroundImage={img_pythonSkillBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
         <div className="item_card_container" style={marginStyles}>
@@ -181,6 +183,7 @@ class AboutMePage extends Component {
             description={backendDescription}
             backgroundImage={img_awsSkillBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
       </div>
@@ -199,6 +202,7 @@ class AboutMePage extends Component {
             description={ucDescription}
             backgroundImage={img_UCSCBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
         <div className="item_card_container">
@@ -209,6 +213,7 @@ class AboutMePage extends Component {
             description={ycDescription}
             backgroundImage={img_YCBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
       </div>
@@ -234,6 +239,7 @@ class AboutMePage extends Component {
             description={zeroYearPlan}
             backgroundImage={img_ZeroYearBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
         <div className="item_card_container_tall">
@@ -244,6 +250,7 @@ class AboutMePage extends Component {
             description={oneYearPlan}
             backgroundImage={img_OneYearBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
         <div className="item_card_container_tall" style={marginStyles}>
@@ -254,6 +261,7 @@ class AboutMePage extends Component {
             description={fiveYearPlan}
             backgroundImage={img_FiveYearBG}
             highlightColor="#19b1ea"
+            renderAsLists={true}
           />
         </div>
       </div>
