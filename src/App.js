@@ -58,7 +58,7 @@ const pageColors = {
 const PT_selectedSection = "selectedSection";
 
 const dataSkeleton = {
-  [PT_selectedSection]: "About Me"
+  [PT_selectedSection]: "IndieOutreach"
 };
 
 var ustra = new Ustra(dataSkeleton);
