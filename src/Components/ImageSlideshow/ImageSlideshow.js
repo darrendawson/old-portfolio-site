@@ -188,7 +188,7 @@ class ImageSlideshow extends Component {
 
 
   renderSelectImageButtons = () => {
-    
+
     if (this.props.images.length <= 1) { return; }
 
     let buttons = [];
