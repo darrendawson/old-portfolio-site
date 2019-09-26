@@ -75,7 +75,7 @@ class ConjurePage extends Component {
           profileImages={[img_conjureIcon]}
           socialMediaLinks={socialMediaLinks}
           description={conjureDescription}
-          viewButtonLink="https://conjure.netlify.com"
+          viewButtonLink="https://conjuredemo.netlify.com"
           highlightColor="#eaac27"
         />
 
